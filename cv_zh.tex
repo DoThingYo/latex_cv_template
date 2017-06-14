@@ -2,14 +2,16 @@
 
 %A Few Useful Packages
 \usepackage{marvosym}
-\usepackage{fontspec} 					%for loading fonts
-\usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
+\usepackage{fontspec}                   %for loading fonts
+\usepackage{xunicode,xltxtra,url,parskip}   %other packages for formatting
 \RequirePackage{color,graphicx}
+%different from en version
+\RequirePackage{xeCJK}
 \usepackage[usenames,dvipsnames]{xcolor}
-\usepackage[big]{layaureo} 				%better formatting of the A4 page
+\usepackage[big]{layaureo}              %better formatting of the A4 page
 % an alternative to Layaureo can be ** \usepackage{fullpage} **
-\usepackage{supertabular} 				%for Grades
-\usepackage{titlesec}					%custom \section
+\usepackage{supertabular}               %for Grades
+\usepackage{titlesec}                   %custom \section
 
 %Setup hyperref package, and colours for links
 \usepackage{hyperref}
@@ -20,6 +22,13 @@
 \defaultfontfeatures{Mapping=tex-text}
 %\setmainfont[SmallCapsFont = Fontin SmallCaps]{Fontin}
 %%% modified for Karol Kozioł for ShareLaTeX use
+%different from en version
+\setCJKmainfont[
+SmallCapsFont = fzltxh.ttf,
+BoldFont = fzltxh.ttf,
+ItalicFont = fzltxh.ttf
+]
+{fzlth.TTF}
 \setmainfont[
 SmallCapsFont = Fontin-SmallCaps.otf,
 BoldFont = Fontin-Bold.otf,
@@ -53,13 +62,13 @@ ItalicFont = Fontin-Italic.otf
 %\font\wm=''Baskerville:color=787878'' at 8pt
 %\font\wmweb=''Baskerville:color=FF1493'' at 8pt
 %{\wm
-%	\begin{textblock}{1}(0,0)
-%		\rotatebox{-90}{\parbox{500mm}{
-%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for
-%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
-%		}
-%	}
-%	\end{textblock}
+%   \begin{textblock}{1}(0,0)
+%       \rotatebox{-90}{\parbox{500mm}{
+%           Typeset by Alessandro Plasmati with \XeTeX\  \today\ for
+%           {\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
+%       }
+%   }
+%   \end{textblock}
 %}
 
 \pagestyle{empty} % non-numbered pages
@@ -68,67 +77,68 @@ ItalicFont = Fontin-Italic.otf
 
 %--------------------TITLE-------------
 \par{\centering
-        {\Huge \textsc{Li} Jiacheng
-        \linebreak\footnotesize{Amazing University, Amazing major, 1996.02}
+        {\Large 李家丞
+        \linebreak\footnotesize{你的大学，你的专业，1996.02}
     }\bigskip\par}
 
 %--------------------SECTIONS-----------------------------------
 
-%Section: Overview of yourself
 \section{Overview}
 \begin{itemize}
-    \item XXXX
-    \item Experiences on XXXX
-    \item Familiar with XXXX
-    \item Familiar with XXXX
+    \item 你的亮点
+    \item 你的技能
 \end{itemize}
 
 %Section: Personal Data
 \section{Contact Info}
 
 \begin{tabular}{rl}
-    \textsc{Address:}   & Amazing Rd, NO 666, Amazing University, Yangpu, Shanghai, China \\
-    \textsc{Phone:}     & +86 182 XXXX XXXX\\
-    \textsc{email:}     & \href{mailto:cnlijiacheng96@gmail.com}{cnlijiacheng96@gmail.com}
+    \textsc{地址：}   & 上海市，杨浦区，XXX路666号一所大学XXX信箱，200092\\
+    \textsc{手机：}     & +86 182 XXXX XXXX\\
+    \textsc{邮件：}     & \href{mailto:cnlijiacheng96@gmail.com}{cnlijiacheng96@gmail.com}
 \end{tabular}
 
 %Section: Work Experience at the top
 \section{Internship}
 \begin{tabular}{r|p{11cm}}
- \textsc{Feb-June 2017} & your title at \textsc{Company Name}, City \\&\emph{\textsc{Supervisor:}\hspace{0.2cm}\href{mailto:your.boss@company.com}{your boss}}\\&
+ \textsc{Feb-June 2017} & XXXX实习生，\textsc{XXXX公司}，上海 \\&\emph{\textsc{主管：}\hspace{0.2cm}\href{mailto:your.boss@company.com}{Mr. Boss}}\\&
 \begin{itemize}
   \footnotesize{
-  \item what have you done
-  \item or the influence you have made}
+  \item XXX系统搭建与维护
+  \item XXXXX}
 \end{itemize}
 \\\multicolumn{2}{c}{} \\
 \end{tabular}
 
 \section{Projects}
 \begin{tabular}{r|p{11cm}}
- \textsc{May- 2017} & Project Name Goes Here \\&
-  \footnotesize{some additional info about the project: your role and accomplishment.}
+ \textsc{May- 2017} & 一个告诉你你就知道的太多的项目 \\&
+  \footnotesize{项目简介、项目成果}
 \\\multicolumn{2}{c}{} \\
- \textsc{Jan 2017} & Project Name Goes Here\\&
- \emph{\textsc{Supervisor:}\hspace{0.2cm}\href{mailto:supervisor@example.edu.cn}{Prof. XXX}}\\&
-  \footnotesize{some additional info about the project: your role and accomplishment.}
+ \textsc{Jan 2017} & 一个有人指导我的项目 \\&
+ \emph{\textsc{指导：}\hspace{0.2cm}\href{mailto:prof@amazing.edu.cn}{XXX 教授}}\\&
+  \footnotesize{项目简介、项目成果}
+\\\multicolumn{2}{c}{} \\
+ \textsc{Apr-Dec 2016} & 一个跟别人合作的项目\\&
+  \emph{小组负责人}\\&
+  \footnotesize{项目简介：你的职责、项目成果}
 \\\multicolumn{2}{c}{} \\
 \end{tabular}
 
 %Section: Education
 \section{Education}
 \begin{tabular}{rl}
- \textsc{Sep} 2014 - \textsc{July} 2018 & B.S Degree in Amazing major, \textsc{Amazing University}\\
+  \textsc{Sep} 2014 - \textsc{July} 2018 & ， \textsc{你的大学}\\
 \end{tabular}
 
 \section{Competitions}
 \begin{tabular}{r|p{11cm}}
- \textsc{Apr-June 2017} & XXXXX\\&
- \emph{additional info to emphasize\%}\\&
-  \footnotesize{some additional info.}
+ \textsc{Apr-June 2017} &XXXXX\\&
+ \emph{XXXX\%}\\&
+  \footnotesize{additional info}
 \\\multicolumn{2}{c}{} \\
- \textsc{Nov 2016} & XXXXX\\&
- \emph{XX prize}
+ \textsc{Nov 2016} & XXXXX竞赛\\&
+ \emph{X等奖}
 \\\multicolumn{2}{c}{} \\
 \end{tabular}
 
@@ -137,23 +147,23 @@ ItalicFont = Fontin-Italic.otf
 %Section: Scholarships and additional info
 \section{Awards}
 \begin{tabular}{rl}
-\textsc{May} 2017 & XXXXX, \textsc{XX prize}\\
-\textsc{Sep} 2015 & XXXXX
+\textsc{May} 2017 & XXXX\\
+\textsc{Sep} 2015 & XXXX奖学金
 \end{tabular}
 
 %Section: Languages
 \section{Languages}
 \begin{tabular}{rl}
- \textsc{Chinese:}&XXXXX\\
-\textsc{English:}&XXXXX\\
+ \textsc{中文：}&XXXX\\
+\textsc{ 英文：}&XXXX\\
 \end{tabular}
 
 \section{Links}
 \begin{itemize}
-    \item \href{https://your-cv.com}{Online CV}
-    \item \href{https://ddlee.cn/projects.html}{My Projects}
-    \item \href{https://blog.ddlee.cn/}{Blog}
-    \item \href{https://www.linkedin.com/in/your-url-goes-here}{LinkedIn Profile}
+    \item \href{https://your-cv.com}{在线简历}
+    \item \href{https://ddlee.cn/projects.html}{项目}
+    \item \href{https://blog.ddlee.cn/}{博客}
+    \item \href{https://www.linkedin.com/in/your-url/}{领英简历}
     \item \href{https://github.com/ddlee96}{GitHub}
 \end{itemize}
 
