@@ -4,9 +4,9 @@ adopted based on template by Alessandro Plasmati @ [ShareLaTeX](https://www.shar
 ## Usage
 Engine: XeLaTeX
 
-Download: [v0.1](https://github.com/ddlee96/latex_cv_template/releases/tag/0.1)
+Download: [v0.1](https://github.com/ddlee96/latex_cv_template/releases/tag/0.1)(Contains .tex file and fonts)
 
-Use: Extract the zip file and modify .text files.
+Use: Extract the zip file and modify .tex files.
 
 Tested on Ubuntu 16.04 with Textlive 2016
 
@@ -19,3 +19,8 @@ Preview [PDF](./cv.pdf)
 ![example](./eg/cv_zh-1.png)
 
 Preview [PDF](./cv_zh.pdf)
+
+
+## Licence
+TeX Code: Apache 2.0
+Fonts: only for personal use
